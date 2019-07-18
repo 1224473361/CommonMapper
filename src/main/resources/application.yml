@@ -1,0 +1,23 @@
+server:
+  port: 80  # 端口
+
+
+---  #请注意，分隔符(---)用于分隔application.yml文件中的每个配置文件。
+#测试
+spring:
+  datasource:
+    # emerp数据源配置
+    oa:
+      jdbc:
+        driverClassName: oracle.jdbc.OracleDriver
+        jdbcUrl: jdbc:oracle:thin:@10.10.100.230:1521:orcl
+        username: oa
+        password: oa
+        testOnBorrow: true
+        testWhileIdle: true
+        timeBetweenEvictionRunsMillis: 60000
+        minEvictableIdleTimeMillis: 30000
+        validationQuery: select 1 from dual
+        max-active: 15
+        max-idle: 10
+        max-wait: 8000
