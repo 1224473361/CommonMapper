@@ -10,9 +10,9 @@ spring:
     oa:
       jdbc:
         driverClassName: oracle.jdbc.OracleDriver
-        jdbcUrl: jdbc:oracle:thin:@10.10.100.230:1521:orcl
-        username: oa
-        password: oa
+        jdbcUrl: 
+        username: 
+        password: 
         testOnBorrow: true
         testWhileIdle: true
         timeBetweenEvictionRunsMillis: 60000
