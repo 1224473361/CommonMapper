@@ -1,14 +1,23 @@
 package com.demo.service;
 
+import java.util.List;
+
+import com.demo.entity.Muser;
+
 /**
- * <p>
- * mybatis-plus测试 服务类
- * </p>
+ * @author Administrator
  *
- * @author XXX
- * @since 2019-06-13
  */
 public interface MuserService  {
 
-	public void test();
+	/**
+	 * 
+	 * @return
+	 */
+	public List<Muser> query();
+	
+	/**
+	 * 
+	 */
+	public int insert();
 }

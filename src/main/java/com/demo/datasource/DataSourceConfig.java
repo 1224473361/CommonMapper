@@ -19,8 +19,8 @@ import com.zaxxer.hikari.HikariDataSource;
 import tk.mybatis.spring.annotation.MapperScan;
 
 @Configuration
-@MapperScan(basePackages = OaDataSourceConfig.PACKAGES, sqlSessionTemplateRef = "sqlSessionTemplate_oa")
-public class OaDataSourceConfig {
+@MapperScan(basePackages = DataSourceConfig.PACKAGES, sqlSessionTemplateRef = "sqlSessionTemplate_oa")
+public class DataSourceConfig {
 	public static final String PACKAGES = "com.demo.mapper";
 	public static final String XMLPATH = "classpath:com/demo/mapper/*.xml";
 

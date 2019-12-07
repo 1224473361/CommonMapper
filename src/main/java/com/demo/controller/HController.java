@@ -1,8 +1,5 @@
 package com.demo.controller;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -24,20 +21,33 @@ public class HController {
 	@Autowired
 	private TranDemoService tranDemoService;
 
-	@RequestMapping("h")
-	public void test() {
-		this.muserService.test();
+	/**
+	 * 查询测试 localhost/query 
+	 */
+	@RequestMapping("query")
+	public Object query() {
+		return this.muserService.query();
 	}
 
-	@RequestMapping("t")
-	public void tran() {
-		this.tranDemoService.tran("123121");
+	/**
+	 * 插入测试 localhost/insert 
+	 * 
+	 * @return
+	 */
+	@RequestMapping("insert")
+	public Object insert() {
+		return this.muserService.insert();
 	}
 
-	@RequestMapping("get")
-	public Map<String, Object> get() {
-		Map<String, Object> m = new HashMap<>();
-		m.put("1ss", "fsfds");
-		return m;
+	/**
+	 * 事务测试 localhost/cTran
+	 * 
+	 * @return
+	 */
+	@RequestMapping("cTran")
+	public String cTran() {
+		tranDemoService.cTran("1231232");
+		return "1";
 	}
+
 }
